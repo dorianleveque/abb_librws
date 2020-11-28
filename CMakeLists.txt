@@ -10,7 +10,7 @@ endif()
 # out with a FATAL_ERROR above. So assume CMAKE_MATCH_1 contains our
 # package's version.
 project(abb_librws VERSION ${CMAKE_MATCH_1} LANGUAGES CXX)
-
+add_compile_options(-std=c++11)
 include(GNUInstallDirs)
 
 list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/third_party")
