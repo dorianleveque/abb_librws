@@ -1005,6 +1005,16 @@ bool RWSInterface::unloadModuleFromTask(const std::string& task, const RWSClient
   return rws_client_.unloadModuleFromTask(task, resource).success;
 }
 
+bool RWSInterface::loadProgramIntoTask(const std::string& task, const RWSClient::FileResource& resource, const bool replace)
+{
+  return rws_client_.loadProgramIntoTask(task, resource, replace).success;
+}
+
+bool RWSInterface::unloadProgramFromTask(const std::string &task)
+{
+  return rws_client_.unloadProgramFromTask(task).success;
+}
+
 bool RWSInterface::getFile(const RWSClient::FileResource& resource, std::string* p_file_content)
 {
   return rws_client_.getFile(resource, p_file_content).success;
